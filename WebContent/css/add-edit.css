@@ -1,0 +1,9 @@
+@CHARSET "UTF-8";
+.fro {position: absolute;width:200px; height:400px;left:50%;top:50%; 
+margin-left:-100px;margin-top:-200px;} 
+h1{
+	text-align: center;
+}
+select,input{
+width:148px;
+}

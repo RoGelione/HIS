@@ -1,0 +1,170 @@
+.content{
+	float: left;
+	width: 1110px;
+	height: 40px;
+	margin-top: 11px;
+	background: #BFEFFF;
+	border-radius:6px;
+}
+.search1{
+	float: left;
+	margin-top: 11px;
+}
+.search{
+	float: left;
+	width:180px;
+}
+.date{
+	float: left;
+	width:200px;
+}
+.date1{
+	float: left;
+	width:270px;
+}
+.date input,.date1 input{
+	width:170px;
+	border-radius:5px;
+	height: 25px;
+	border: 0px;background-color: gainsboro;
+}
+.search input,.search select{	
+	border-radius:5px;
+	height: 25px;
+	border: 0px;background-color: gainsboro;
+}
+.search input{width:100px;}
+.search select{width:80px;}
+#goSearch{
+	border-radius:15px;
+	height: 25px;
+	border: 0px;
+	background-color: gainsboro;
+}
+.goButton{
+	width: 40px;
+	height: 25px;
+	border-radius:5px;
+	border: 0px;
+	background-color: skyblue;
+}
+.goButton1{
+	width: 150px;
+	height: 25px;
+	border-radius:6px;
+	border: 0px;
+	background-color: skyblue;
+}
+.content1{
+	float: left;
+	width: 100%;
+	height: 525px;
+}
+.tab{
+	float: left;	
+	text-align: center;	
+}
+.tabtic1,.tabtic2,.tabtic7,.tabtic5,.tabtic3,.tabtic9,.tabtic11{
+	float: left;
+}
+.tabtic,.tabtic0,.tabtic4,.tabtic6,.tabtic8,.tabtic10{
+	background: #00FFFF;
+}
+.tabtic,.tabtic2,.tabtic3,.tabtic4,.tabtic5,.tabtic6,.tabtic7,.tabtic8,.tabtic9,.tabtic10,.tabtic11{
+	border-radius:6px;
+}
+/* 用户*/
+.tabtic{
+	float: left;
+
+}
+.tabtic li,.tabtic2 li{
+	float: left;
+	width: 222px;
+	height: 40px;	  
+}
+/* 药品*/
+.tabtic0{
+	float: left;
+
+}
+.tabtic0 li,.tabtic3 li{
+	float: left;
+	width: 110px;
+	height: 40px;	  
+}
+/*入库*/
+.tabtic4{
+	float: left;
+
+}
+.tabtic4 li,.tabtic5 li{
+	float: left;
+	width: 92.5px;
+	height: 40px;  
+}
+/*库存*/
+.tabtic6{
+	float: left;
+
+}
+.tabtic6 li,.tabtic7 li{
+	float: left;
+	width: 138px;
+	height: 40px;	  
+}
+/*出库*/
+.tabtic8{
+	float: left;
+
+}
+.tabtic8 li,.tabtic9 li{
+	float: left;
+	width: 138px;
+	height: 40px;	  
+}
+/*厂商*/
+.tabtic10{
+	float: left;
+
+}
+.tabtic10 li,.tabtic11 li{
+	float: left;
+	width: 138px;
+	height: 222px;	  
+}
+
+.tabtic2:nth-child(odd),.tabtic3:nth-child(odd),.tabtic5:nth-child(odd),.tabtic7:nth-child(odd),.tabtic9:nth-child(odd),.tabtic11:nth-child(odd){
+	background: white; 
+}
+.tabtic2:nth-child(even),.tabtic3:nth-child(even),.tabtic5:nth-child(even),.tabtic7:nth-child(even),.tabtic9:nth-child(even),.tabtic11:nth-child(even){
+	background: #97FFFF; 
+}
+
+
+ .tabtic0 li, .tabtic3 li,.tabtic4 li,.tabtic5 li,.tabtic li,.tabtic2 li,.tabtic6 li,.tabtic7 li,.tabtic8 li,.tabtic9 li{
+	line-height:40px; 
+}
+/*.tabtic2 a{
+	vertical-align:middle ;
+} */
+.con-tab{
+	margin: 0;
+	background: whitesmoke; 	
+}
+.pager{	
+	width: 1110px;
+	height: 30px;
+	margin-top: 470px;
+	background: #BFEFFF;
+}
+.k1{
+	float: left;
+	width: 30%;
+	height: 100%;
+}
+.k2{
+	float: left;
+	font-weight: 900;
+}
+

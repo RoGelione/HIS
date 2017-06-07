@@ -1,0 +1,35 @@
+@CHARSET "UTF-8";
+*{	
+	text-decoration: none;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	
+}
+body{
+	float:left;
+	width:100%;	
+	min-width:1349px;
+	height: 630px;
+	font-family:"FangSong";background-color:#F8F8FF;
+}
+header{
+	float: left;
+	width: 100%;
+	height: 12%;
+	background:url(../img/11.jpg);
+}
+
+nav{
+	float: left;
+	width: 16%;
+	height: 88%;
+}
+
+section{
+	float: left;
+	width: 84%;
+	height: 88%;
+	
+}
+

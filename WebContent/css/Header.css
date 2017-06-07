@@ -1,0 +1,40 @@
+@CHARSET "UTF-8";
+#title{
+	float: left;
+	height: 70%;
+	width: 35%;
+	margin-top: 1%;
+	margin-left: 2%;
+}
+.icon{
+	float: left;
+	height: 52px;
+	width: 80px;
+	background: url(../img/butterfly11.png);
+	background-size: cover;
+}
+.tname{
+	float: left;
+	height:50px;
+	width: 50%;
+	font-size: 2.1em;
+	color:white;
+	line-height: 50px;
+}
+.tname i{
+	float: left;
+	margin-top: 5%;
+}
+.esc{
+	float: right;
+	height:50%;
+	width: 12%;
+	margin-top: 1.5%;
+	margin-right: 3%;
+}
+
+.esc a{
+	float: right;
+	color:white;
+	font-weight: 900;
+}

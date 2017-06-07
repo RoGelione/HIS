@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<!-- 用户依赖注入 -->
+	<bean id="userDao" class="com.dg.dao.UserDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	<bean id="userServiceBase" class="com.dg.service.UserServiceImpl">
+			<property name="userDao" ref="userDao"></property>
+	</bean>
+	<!-- 药品信息依赖注入 -->
+	<bean id="drugDao" class="com.dg.dao.DrugDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	<bean id="drugServiceBase" class="com.dg.service.DrugServiceImpl" >
+			<property name="drugDao" ref="drugDao"></property>
+	</bean>
+	<!-- 入库信息依赖注入 -->
+	<bean id="rukuDao" class="com.dg.dao.RukuDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	<bean id="rukuServiceBase" class="com.dg.service.RukuServiceImpl" >
+			<property name="rukuDao" ref="rukuDao"></property>
+	</bean>
+	<!-- 库存信息依赖注入 -->
+	<bean id="kucunDao" class="com.dg.dao.KucunDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	<bean id="kucunServiceBase" class="com.dg.service.KucunServiceImpl" >
+			<property name="kucunDao" ref="kucunDao"></property>
+	</bean>
+	<!-- 出库信息依赖注入 -->
+	<bean id="chukuDao" class="com.dg.dao.ChukuDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	<bean id="chukuServiceBase" class="com.dg.service.ChukuServiceImpl" >
+			<property name="chukuDao" ref="chukuDao"></property>
+	</bean>
+	<!-- 厂家信息依赖注入 -->
+	<bean id="supplierDao" class="com.dg.dao.SupplierDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	<bean id="supplierServiceBase" class="com.dg.service.SupplierServiceImpl" >
+			<property name="supplierDao" ref="supplierDao"></property>
+	</bean>
+	<!-- 分页 -->
+	<bean id="PageDao" class="com.dg.dao.PageDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	<bean id="userPageBase" class="com.dg.service.UserServiceImpl" ><!--用户分页 -->
+			<property name="PageDao" ref="PageDao"></property>
+	</bean>
+	<bean id="drugPageBase" class="com.dg.service.DrugServiceImpl" ><!--药品信息分页 -->
+			<property name="PageDao" ref="PageDao"></property>
+	</bean>
+	<bean id="rukuPageBase" class="com.dg.service.RukuServiceImpl" ><!--药品信息分页 -->
+			<property name="PageDao" ref="PageDao"></property>
+	</bean>
+	<bean id="kucunPageBase" class="com.dg.service.KucunServiceImpl" ><!--药品信息分页 -->
+			<property name="PageDao" ref="PageDao"></property>
+	</bean>
+	<bean id="chukuPageBase" class="com.dg.service.ChukuServiceImpl" ><!--药品信息分页 -->
+			<property name="PageDao" ref="PageDao"></property>
+	</bean>
+	<bean id="supplierPageBase" class="com.dg.service.SupplierServiceImpl" ><!--药品信息分页 -->
+			<property name="PageDao" ref="PageDao"></property>
+	</bean>
+	<!-- 此处为代理 -->
+	<bean id="userDaoService" parent="transactionProxy">
+		<property name="target" ref="userServiceBase"></property>
+	</bean>
+	<bean id="drugDaoService" parent="transactionProxy">
+		<property name="target" ref="drugServiceBase"></property>
+	</bean>
+	<bean id="rukuDaoService" parent="transactionProxy">
+		<property name="target" ref="rukuServiceBase"></property>
+	</bean>
+	<bean id="kucunDaoService" parent="transactionProxy">
+		<property name="target" ref="kucunServiceBase"></property>
+	</bean>
+	<bean id="chukuDaoService" parent="transactionProxy">
+		<property name="target" ref="chukuServiceBase"></property>
+	</bean>
+	<bean id="supplierDaoService" parent="transactionProxy">
+		<property name="target" ref="supplierServiceBase"></property>
+	</bean>
+	<!--分页代理 -->
+	<bean id="userPageService" parent="transactionProxy">
+		<property name="target" ref="userPageBase"></property>
+	</bean>
+	<bean id="drugPageService" parent="transactionProxy">
+		<property name="target" ref="drugPageBase"></property>
+	</bean>
+	<bean id="rukuPageService" parent="transactionProxy">
+		<property name="target" ref="rukuPageBase"></property>
+	</bean>
+	<bean id="kucunPageService" parent="transactionProxy">
+		<property name="target" ref="kucunPageBase"></property>
+	</bean>
+	<bean id="chukuPageService" parent="transactionProxy">
+		<property name="target" ref="chukuPageBase"></property>
+	</bean>
+	<bean id="supplierPageService" parent="transactionProxy">
+		<property name="target" ref="supplierPageBase"></property>
+	</bean>
+</beans>
